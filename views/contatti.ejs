@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contatti</title>
+<link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+<link href="stylesheets/style3.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<% if (!user) { %>
+        <nav>
+                        <ul>
+                          <li><a href="home"><i class="fa fa-fw fa-home"></i> Home</a></li>
+                          <li><a href="about"><i class="fa fa-fw fa-info-circle"></i> About App</a></li>
+                          <li><a href="contatti"><i class="fa fa-fw fa-user"></i> Contacts</a></li>
+                          <li><a href="signup"><i class="fa fa-fw fa-user-plus"></i> Signup</a></li>
+                          <li><a href="login"><i class="fa fa-fw fa-sign-in"></i> Login</a></li>
+                          
+                    
+                        </ul>
+                      </nav>
+<% } else { %>
+        <nav>
+                        <ul>
+                          <li><a href="home"><i class="fa fa-fw fa-home"></i> Home</a></li>
+                          <li><a href="about"><i class="fa fa-fw fa-info-circle"></i> About App</a></li>
+                          <li><a href="contatti"><i class="fa fa-fw fa-user"></i> Contacts</a></li>
+                          <li><a href="profile"><i class="fa fa-fw fa-user"></i> Profile</a></li>
+                          <li><a href="chat"><i class="fa fa-comments"></i> Chat</a></li>
+                          <li><a href="logout"><i class="fa fa-fw fa-sign-out"></i> Logout</a></li>
+                          
+                    
+                        </ul>
+                      </nav>
+<% } %>
+<div style="width:750px;height:180px;background-color:transparent;padding:75px;margin-left:5%;margin-top:8%;box-shadow: 0 8px 16px 0 black;">
+                <div class="img">
+                                <img src="stylesheets/img/JasonHawkesLondonStory18n.jpg">
+                        </div>
+<h1>Contatti</h1>
+<p>Sono uno studente di Ingegneria Informatica e Automatica dell'Università Sapienza di Roma.</p>
+<br>
+<p> La mia mail istituzionale è: <i>iacomini.1706790@studenti.uniroma1.it</i> </p>
+<p> La mia mail privata è: <i>danieleiacomini96@gmail.com</i> </p>
+<p> Il link al mio profilo GitHub contenente la repo dell'applicazione è <a href="https://github.com/DanieleIacomini" >qui</a>.</p>
+</div>
+</body>
+</html>

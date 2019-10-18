@@ -1,0 +1,71 @@
+<!-- views/profile.ejs -->
+<!doctype html>
+<html>
+<head>
+	<title>Node Authentication</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+	<link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+	<link href="stylesheets/style3.css" rel="stylesheet" type="text/css">
+	<script src="http://code.jquery.com/jquery-3.0.0.slim.min.js"></script>
+</head>
+<body>
+		<nav>
+				<ul>
+				  <li><a href="home"><i class="fa fa-fw fa-home"></i> Home</a></li>
+				  <li><a href="about"><i class="fa fa-fw fa-info-circle"></i> About App</a></li>
+				  <li><a href="contatti"><i class="fa fa-fw fa-user"></i> Contacts</a></li>
+				  <li><a href="profile"><i class="fa fa-fw fa-user"></i> Profile</a></li>
+				  <li><a href="chat"><i class="fa fa-comments"></i> Chat</a></li>
+				  <li><a href="logout"><i class="fa fa-fw fa-sign-out"></i> Logout</a></li>
+				  
+			
+				</ul>
+			  </nav>
+			
+
+<div class="container">
+
+		<div class="img">
+				<img src="stylesheets/img/JasonHawkesLondonStory18n.jpg">
+			</div>
+	<br><br><br>		
+	<div class="page-header text-center">
+		<h1><span class="fa fa-user"></span> <%= user.facebook.name %> Profile Page</h1>
+	</div>
+
+	<div class="row">
+
+		<!-- LOCAL INFORMATION -->
+		 <div class="col-sm-6">
+			<div class="well" style="background-color:transparent;box-shadow: 0 8px 16px 0 black;">
+				<h3><span class="fa fa-user"></span> Local</h3>
+
+					<p>
+						<strong>Email</strong>: <%= user.local.username %><br>
+						<strong>Password</strong>: ●●●●●●●● <br>
+						<strong>Last Access</strong>: <%= user.local.time %><br>   
+					</p>
+
+			</div>
+		</div>
+
+		 <!-- FACEBOOK INFORMATION -->
+        <div class="col-sm-6">
+            <div class="well"  style="background-color:transparent;box-shadow: 0 8px 16px 0 black;">
+                <h3 class="text-primary"><span class="fa fa-facebook"></span> Facebook</h3>
+
+                <p>
+                    <strong>id</strong>: <%= user.facebook.id %><br>
+                    <strong>email</strong>: <%= user.facebook.email %><br>
+                    <strong>name</strong>: <%= user.facebook.name %>
+                </p>
+
+            </div>
+        </div>
+
+	</div>
+
+</div>
+</body>
+</html>

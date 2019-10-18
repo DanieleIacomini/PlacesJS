@@ -1,0 +1,88 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  
+  overflow-y:hidden !important;
+}
+
+.img img{
+  opacity:0.3;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top:0;
+  overflow: hidden;
+  width: 100%;
+  z-index: -1;
+}
+
+.topnav {
+  top:0;
+  background-color: #333;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+a {
+  color: #00B7FF;
+}
+
+.property {
+  width: 100%
+}
+
+.btn-facebook {
+  background: #3B5998;
+  border-radius: 10;
+  color: #fff;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #263961; 
+}
+.btn-facebook:link, .btn-facebook:visited {
+  color: #fff;
+}
+.btn-facebook:active, .btn-facebook:hover {
+  background: #263961;
+  color: #fff;
+}
+
+input[type=text] {
+  width: 300px;
+  height: 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white;
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+

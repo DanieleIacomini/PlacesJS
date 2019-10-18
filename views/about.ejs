@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>AboutApp</title>
+<link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+<link href="stylesheets/style3.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+
+
+<body>
+<% if (!user) { %>
+        <nav>
+                        <ul>
+                          <li><a href="home"><i class="fa fa-fw fa-home"></i> Home</a></li>
+                          <li><a href="about"><i class="fa fa-fw fa-info-circle"></i> About App</a></li>
+                          <li><a href="contatti"><i class="fa fa-fw fa-user"></i> Contacts</a></li>
+                          <li><a href="signup"><i class="fa fa-fw fa-user-plus"></i> Signup</a></li>
+                          <li><a href="login"><i class="fa fa-fw fa-sign-in"></i> Login</a></li>
+                          
+                    
+                        </ul>
+                      </nav>
+<% } else { %>
+        <nav>
+                        <ul>
+                          <li><a href="home"><i class="fa fa-fw fa-home"></i> Home</a></li>
+                          <li><a href="about"><i class="fa fa-fw fa-info-circle"></i> About App</a></li>
+                          <li><a href="contatti"><i class="fa fa-fw fa-user"></i> Contacts</a></li>
+                          <li><a href="profile"><i class="fa fa-fw fa-user"></i> Profile</a></li>
+                          <li><a href="chat"><i class="fa fa-comments"></i> Chat</a></li>
+                          <li><a href="logout"><i class="fa fa-fw fa-sign-out"></i> Logout</a></li>
+                          
+                    
+                        </ul>
+                      </nav>
+<% } %>
+<div style="width:750px;height:180px;background-color:transparent;padding:75px;margin-left:5%;margin-top:8%;background-color:transparent;box-shadow: 0 8px 16px 0 black;">
+                <div class="img">
+                                <img src="stylesheets/img/JasonHawkesLondonStory18n.jpg">
+                </div>
+
+<h1>AboutApp</h1>
+
+<p class = "lead">
+                Progetto di Tirocinio valevole come tesi finale di Laurea Triennale in Ingegneria Informatica <br><br>
+                
+                La prova consiste nella progettazione e sviluppo di un Web-Application utilizzando il framework NodeJS. <br><br>
+                
+                La documentazione riguardo NodeJS è consultabile al seguente <a href="https://nodejs.org/it/docs/">link</a> nella sezione Docs.<br>
+</p>
+</div>
+</body>
+</html>

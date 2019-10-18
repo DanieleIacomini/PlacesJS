@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>WebSocket Chat</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style2.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style3.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <script src="http://code.jquery.com/jquery-3.0.0.slim.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+          <li><a href="home"><i class="fa fa-fw fa-home"></i> Home</a></li>
+          <li><a href="about"><i class="fa fa-fw fa-info-circle"></i> About App</a></li>
+          <li><a href="contatti"><i class="fa fa-fw fa-user"></i> Contacts</a></li>
+          <li><a href="profile"><i class="fa fa-fw fa-user"></i> Profile</a></li>
+          <li><a href="chat"><i class="fa fa-comments"></i> Chat</a></li>
+          <li><a href="logout"><i class="fa fa-fw fa-sign-out"></i> Logout</a></li>
+          
+    
+        </ul>
+      </nav>
+    <br><br><br><br>
+    <div class="img">
+        <img src="stylesheets/img/JasonHawkesLondonStory18n.jpg">
+    </div>
+    <form>
+        <div id="name-div"> <!--<%= user.facebook.name %> -->
+           <input id="name" name="name" autocomplete="off" autofocus placeholder="Enter your nickname" /> 
+            <button>Submit</button>
+        </div>
+        <div id="welcome"></div>
+        <ul id="messages"></ul>
+        <div id="input-div">
+            <input id="message" name="message" autocomplete="off" placeholder="Type your message here" />
+            <button>Send</button>
+        </div>
+    </form>
+
+    <script>
+        websocket = new WebSocket("ws://localhost:8080/");
+        $('form').submit(function() {
+            name = $('#name').val() ? $('#name').val() : 'Anonymous';
+            $('#name-div').hide();
+            $('#welcome').text('Hello ' + name);
+            websocket.send(JSON.stringify({
+                name: name,
+                message: $('#message').val()
+            }));
+            $('#message').focus();
+            $('#message').val('');
+            return false;
+        });
+        websocket.onmessage = function(evt) {
+            $('#messages').append($('<li>').html(evt.data));
+        };
+        websocket.onerror = function(evt) {
+            $('#messages').append($('<li>').text('<span style="color: red;">ERROR:</span> ' + evt.data));
+        };
+    </script>
+</body>
+
+</html>
